@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">        
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<title>Multiple Button Confirm</title>
+		<script src="./js/maconfirm.js" type="text/javascript"></script>
+		<!--
+		<script src="./js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  	<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+			
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/bootstrap.min.js"></script>
+	 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" media="screen" href="./css/maconfirm.css">
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">		
+
+	</head>
+	<body>
+		<p>マルチconfirmのサンプル</p>
+		<p>参照：https://qiita.com/waddy_u/items/0373937df09ffaba7222</p>
+		<a href="javascript:void(0);" id="confirmLink">confirmのマルチボタンサンプル</a>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("#confirmLink").click(function(){
+				uploadConfirm({
+				    id: 'confirm',
+				    title: "マルチconfirm",
+				    message: '選択肢を提示します。',
+				    buttons: {
+				      "ボタン１": {
+				        "class": "btn btn-info btn-small",
+				        action: function() {
+				        	alert('replaced a file.');
+				        }
+				      },
+				      "ボタン２": {
+				        "class": "btn btn-info btn-small",
+				        action: function() {
+				        	alert('replaced all files.');
+				        }
+							},
+							"ボタン３": {
+				        "class": "btn btn-small",
+				        action: function() {
+				        	alert('original')
+				        }
+							},
+				      "ボタン４": {
+				        "class": "btn btn-small",
+				        action: function() {
+				        	alert('original')
+				        }
+							},
+				      "ボタン５": {
+				        "class": "btn btn-small",
+				        action: function() {
+				        	alert('original')
+				        }
+				      }
+				    }
+				  });
+			});
+		});
+	</script>
+</html>
