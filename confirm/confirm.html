@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+        <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">        
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <title>confirmサンプル</title>
+        </head>
+
+        <script type="text/javascript">            
+            function disp(){
+            
+                // 「OK」時の処理開始 ＋ 確認ダイアログの表示
+                if(window.confirm('本当にいいんですね？')){           
+                    location.href = "example_confirm.html"; // example_confirm.html へジャンプ
+            
+                }
+                // 「OK」時の処理終了
+            
+                // 「キャンセル」時の処理開始
+                else{      
+                    window.alert('キャンセルされました'); // 警告ダイアログを表示
+            
+                }
+                // 「キャンセル」時の処理終了          
+            }
+            
+            </script>   
+        
+        <body>
+        <h1>サンプル</h1>
+        <p>confirmサンプル</p>
+        <p>内容：confirmで別ページへのリンクと、キャンセルした時のalert</p>
+        <p>参考：http://www.tagindex.com/javascript/window/confirm.html</p>
+        <p><input type="button" value="確認ダイアログ" onClick="disp()"></p>
+
+<hr>
+        <p>日本三代珍味に数えられる3つの食材は何でしょう?</p>
+        <form name="form1">
+        <p><input type="button" value="答えをみる" onclick="document.form1.textarea1.value='からすみ¥nこのわた¥nうに'"></p>
+        <p><textarea cols="40" rows="4" name="textarea1"></textarea></p>
+<hr>
+        </body>
+        </html>
+        
+       
