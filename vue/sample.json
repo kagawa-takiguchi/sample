@@ -1,0 +1,21 @@
+[
+
+{
+ "channel": "NHK",
+ "title": "ピョンチャンオリンピック",
+ "summary": "スピードスケート",
+ "day": "20180218",
+ "starttime": "2300",
+ "link": "sample"
+},
+
+{
+ "channel": "NHK",
+ "title": "ニュース・気象情報",
+ "summary": " ",
+ "day": "20180219",
+ "starttime": "0000",
+ "link": "sample"
+}
+
+]
